@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #011627;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    text-align: center;
+  
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;  
+    width: 100%;
+}
+
+
+.my_btn, .form-select {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.square{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border: 1px solid aqua;
+}
+.acqua{
+    background-color: aqua;
+}
