@@ -40,7 +40,7 @@ function generaGriglia(whereGemerateGrid, howManycells){
         casella.addEventListener('click', function(){
             casella.classList.toggle('acqua');
             casella.style.color = 'black';
-            alert(` la casella selezionata è la numero ${casella.innerHTML}`);
+            console.log(` la casella selezionata è la numero ${casella.innerHTML}`);
             
         });
     }
