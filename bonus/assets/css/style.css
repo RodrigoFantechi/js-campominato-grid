@@ -16,6 +16,7 @@ body {
   
 }
 .grid{
+    color: white;
     display: flex;
     flex-wrap: wrap;  
     width: 100%;
@@ -30,7 +31,6 @@ body {
 }
 
 .square{
-    color: white;
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -40,4 +40,7 @@ body {
 }
 .acqua{
     background-color: aqua;
+}
+.color{
+    color: black;
 }
