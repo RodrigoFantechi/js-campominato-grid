@@ -12,36 +12,25 @@ con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 
 const button = document.querySelector('button');
 const container = document.querySelector('.grid');
 
-button.addEventListener('click', function(){
-    container.innerHTML= '';
-    gridcells = document.querySelector('.form-select').value;
+
+button.addEventListener('click', function () {
+    container.innerHTML = '';
+    const gridcells = document.querySelector('.form-select').value;
     generaGriglia(container, gridcells);
+
 });
 
-
-
-function generaGriglia(whereGemerateGrid, howManycells){
-    for (let i = 0; i < howManycells; i++) {
+function generaGriglia(whereGemerateGrid, howManycells) {
+    for (let i = 1; i <= howManycells; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
-        if (howManycells === '100'){
-            square.style.width = '10%';
-        } else if(howManycells === '81'){
-            square.style.width = 'calc(100% / 9)' ;
-        } else{
-            square.style.width = 'calc(100% / 7)'; 
-        }
-        square.innerText = i+1;
+        const cellePerRiga = Math.sqrt(howManycells);
+        square.style.width = `calc(100% / ${cellePerRiga})`;
+        square.innerText = i;
         whereGemerateGrid.insertAdjacentElement('beforeend', square);
-    }
-    const caselle = document.querySelectorAll('.square');
-    for (let i = 0; i < caselle.length; i++) {
-        const casella = caselle[i];
-        casella.addEventListener('click', function(){
-            casella.classList.toggle('acqua');
-            casella.classList.toggle('color');
-            console.log(` la casella selezionata è la numero ${casella.innerHTML}`);
-            
+        square.addEventListener('click', function () {
+            square.classList.toggle('acqua');
+            console.log(` la casella selezionata è la numero ${square.innerHTML}`);
         });
     }
-} 
+}
