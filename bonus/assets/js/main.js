@@ -21,6 +21,7 @@ button.addEventListener('click', function () {
 });
 
 function generaGriglia(whereGemerateGrid, howManycells) {
+    // genera la griglia
     for (let i = 1; i <= howManycells; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -28,6 +29,7 @@ function generaGriglia(whereGemerateGrid, howManycells) {
         square.style.width = `calc(100% / ${cellePerRiga})`;
         square.innerText = i;
         whereGemerateGrid.insertAdjacentElement('beforeend', square);
+        // colora ogni singola casella al click 
         square.addEventListener('click', function () {
             square.classList.toggle('acqua');
             console.log(` la casella selezionata è la numero ${square.innerHTML}`);
